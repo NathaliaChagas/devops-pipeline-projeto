@@ -1,0 +1,10 @@
+{
+  "name": "devops-pipeline-projeto",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "node src/test.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
