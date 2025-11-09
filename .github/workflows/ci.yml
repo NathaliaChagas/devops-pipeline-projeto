@@ -14,21 +14,22 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v3
 
-      - name: Configurar Node.js
+      - name: Instalar Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: Verificar diretório atual
-        run: pwd && ls -la
-
-      - name: Navegar até a raiz do projeto
-        run: cd $GITHUB_WORKSPACE && ls -la
+      - name: Verificar estrutura de pastas
+        run: |
+          echo "Diretório atual:"
+          pwd
+          echo "Conteúdo da pasta:"
+          ls -R
 
       - name: Instalar dependências
-        working-directory: .
         run: npm install
+        working-directory: devops-pipeline-projeto
 
       - name: Executar testes automatizados
-        working-directory: .
         run: npm test
+        working-directory: devops-pipeline-projeto
