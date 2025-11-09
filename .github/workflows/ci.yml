@@ -14,13 +14,21 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v3
 
-      - name: Instalar Node.js
+      - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
+      - name: Verificar diretório atual
+        run: pwd && ls -la
+
+      - name: Navegar até a raiz do projeto
+        run: cd $GITHUB_WORKSPACE && ls -la
+
       - name: Instalar dependências
+        working-directory: .
         run: npm install
 
       - name: Executar testes automatizados
+        working-directory: .
         run: npm test
