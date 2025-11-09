@@ -21,9 +21,9 @@ jobs:
 
       - name: Verificar estrutura de pastas
         run: |
-          echo "📁 Diretório atual:"
+          echo "Diretório atual:"
           pwd
-          echo "📂 Conteúdo da pasta:"
+          echo "Conteúdo da pasta:"
           ls -R
 
       - name: Instalar dependências
