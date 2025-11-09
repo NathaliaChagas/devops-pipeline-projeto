@@ -5,7 +5,7 @@ Este projeto faz parte da Fase 1 da matéria de DevOps, onde o objetivo é confi
 ## Objetivos
 - Configurar um pipeline de CI utilizando GitHub Actions.
 - Automatizar a criação de infraestrutura utilizando Terraform.
-- Implementar testes automatizados.
+- Implementar testes automatizados. 
 
 ## Estrutura
 - `.github/workflows/ci.yml` → Pipeline CI/CD.
