@@ -50,7 +50,8 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
 
       - name: Deploy with Docker Compose (pull image and up)
-        uses: docker/compose-action@v2
-        with:
-          files: docker-compose.yml
-          args: up -d
+        run: |
+          docker compose pull
+          docker compose up -d
+
+
